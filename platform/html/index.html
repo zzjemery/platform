@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../css/public.css"> -->
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body style="overflow:hidden;">
+    <div class="container-fluid" style="padding:0;margin:0 15px;">
+        <div class="header row">
+            <div class="name col-lg-2 linear">
+                外部数据采集平台
+            </div>
+            <div class="nav col-lg-10">
+                <div class="itemlist fr">
+                    <ul class="fr" style="margin-bottom:0px">
+                        <li><span class="user">管理员2</span>，欢迎您，上次登录时间：<span class="loginTime">2018-08-27 09:22</span></li>
+                        <li><span class="glyphicon glyphicon-time"></span>任务提醒</li>
+                        <li><span class="glyphicon glyphicon-lock"></span>修改密码</li>
+                        <li style="position:relative;">
+                            <div class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <span class="glyphicon glyphicon-adjust"></span>主题换肤<span class="caret"></span>
+                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><span class="color orange"></span> 默认橘黄</li>
+                                <li><span class="color blue"></span> 科技蓝</li>
+                                <li><span class="color per"></span> 高贵紫</li>
+                            </ul>
+                        </li>
+                        <li><span class="glyphicon glyphicon-off"></span>退出系统</li>
+                    </ul>
+                </div>
+                <div class="itemnav fl">
+                    <ul class="nav_ul">
+                        <li class="active">主页</li>
+                        <li>公告发布</li>
+                        <li>参数表维护</li>
+                        <li>工作日维护</li>
+                        <li>内管菜单管理</li>
+                        <li>快捷菜单定制</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content row">
+            <div class="control col-lg-2" style="padding:0;">
+                <ul class="control_ul">
+                    <li class="active">
+                        <span class="actflag"></span>系统管理
+                        <ul class="control_li_ul">
+                            <li>
+                                机构管理<span class="glyphicon glyphicon-chevron-right" style="float: right;padding-top: 8px;padding-right: 3px;"></span>
+                                <ul class="control_ul_ul">
+                                    <li>机构维护</li>
+                                    <li>机构级别维护</li>
+                                </ul>
+                            </li>
+                            <li>角色管理<span class="glyphicon glyphicon-chevron-right" style="float: right;padding-top: 8px;padding-right: 3px;"></span>
+                                <ul class="control_ul_ul">
+                                    <li class="jumpUrl" data-url="jswh">角色维护</li>
+                                </ul>
+                            </li>
+                            <li>操作员管理</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="actflag"></span>银行公告
+                        <ul class="control_li_ul">
+                            <li  class="jumpUrl" data-url="ggfb">
+                                公告发布
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="actflag"></span>参数管理
+                        <ul class="control_li_ul">
+                            <li  class="jumpUrl" data-url="csbwh">
+                                参数表维护
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="actflag"></span>日志管理</li>
+                    <li>
+                        <span class="actflag"></span>计费管理
+                        <ul class="control_li_ul">
+                            <li  class="jumpUrl" data-url="fwjf">
+                                服务计费
+                            </li>
+                            <li  class="jumpUrl" data-url="yjpz">
+                                预警配置
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="actflag"></span>权限管理</li>
+                    <li>
+                        <span class="actflag"></span>时效管理
+                        <ul class="control_li_ul">
+                            <li  class="jumpUrl" data-url="sxgl">
+                                交易时效管理
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="actflag"></span>统计管理
+                    </li>
+                    <li>
+                        <span class="actflag"></span>海关查询
+                        <ul class="control_li_ul">
+                                <li  class="jumpUrl" data-url="tjqd">
+                                    海关数据统计清单
+                                </li>
+                            </ul>
+                    </li>
+                    <li><span class="actflag"></span>银监数据</li>
+                    <li>
+                        <span class="actflag"></span>批量数据管理
+                        <ul class="control_li_ul">
+                            <li>
+                                百度数据管理<span class="glyphicon glyphicon-chevron-right" style="float: right;padding-top: 8px;padding-right: 3px;"></span>
+                                <ul class="control_ul_ul">
+                                    <li class="jumpUrl" data-url="bdsjdr">百度数据导入</li>
+                                </ul>
+                            </li>
+                            <li>宁波国税授信数据管理<span class="glyphicon glyphicon-chevron-right" style="float: right;padding-top: 8px;padding-right: 3px;"></span>
+                                <ul class="control_ul_ul">
+                                    <li class="jumpUrl" data-url="xxdr">宁波国税授信信息导入</li>
+                                </ul>
+                            </li>
+                            <li>法院数据管理<span class="glyphicon glyphicon-chevron-right" style="float: right;padding-top: 8px;padding-right: 3px;"></span>
+                                <ul class="control_ul_ul">
+                                    <li class="jumpUrl" data-url="sbgl">法院失败管理</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><span class="actflag"></span>实时查询</li>
+                    <li><span class="actflag"></span>白名单</li>
+                </ul>
+                <span class="toleft"><i class="glyphicon glyphicon-triangle-left" style="color:#fff;text-align: center;line-height: 80px;"></i></span>
+            </div>
+            <div class="view col-lg-10">
+                <div class="showView">
+                    <iframe src="./llfx.html" frameborder="0" width="100%" height="100%"></iframe>
+                </div>
+            </div>
+            <div id="bulletin">
+                <p style="font-weight:bold;">通知公告</p>
+                <ul>
+                    <li><span class="bulletin_type">类型一</span>计费配置已经超限<span class="bulletin_time">2018-08-27</span></li>
+                    <li><span class="bulletin_type">类型二</span>计费配置已经超限<span class="bulletin_time">2018-08-25</span></li>
+                    <li><span class="bulletin_type">类型三</span>计费配置已经超限<span class="bulletin_time">2018-08-22</span></li>
+                    <li><span class="bulletin_type">类型四</span>计费配置已经超限<span class="bulletin_time">2018-08-20</span></li>
+                    <li><span class="bulletin_type">类型五</span>计费配置已经超限<span class="bulletin_time">2018-08-19</span></li>
+                </ul>
+                <span class="notice"><i class="glyphicon glyphicon-triangle-left" style="color:#fff;text-align: center;line-height: 80px;"></i></span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="../js/index.js"></script>
+<script>
+    window.onload=function(){
+        $('.control_li_ul>li').hover(function(){
+            $(this).find('.control_ul_ul').css('display','block');
+        },function(){
+            $(this).find('.control_ul_ul').css('display','none');
+        })
+        $('.jumpUrl').on('click',function(){
+            var url = $(this).attr('data-url');
+            switch(url){
+                case 'bdsjdr':
+                    $('iframe').attr('src','./bdsjdr.html');
+                    $('.control_ul').children("li:eq(10)").addClass("active").siblings().removeClass("active");
+                    break;
+                case 'csbwh':
+                    $('iframe').attr('src','./csbwh.html');
+                    $('.control_ul').children("li:eq(2)").addClass("active").siblings().removeClass("active");
+                    break;
+                case 'fwjf':
+                    $('iframe').attr('src','./fwjf.html');
+                    $('.control_ul').children("li:eq(4)").addClass("active").siblings().removeClass("active");
+                    break;
+                case 'ggfb':
+                    $('iframe').attr('src','./ggfb.html');
+                    $('.control_ul').children("li:eq(1)").addClass("active").siblings().removeClass("active");
+                    break;
+                case 'jswh':
+                    $('iframe').attr('src','./jswh.html');
+                    $('.control_ul').children("li:eq(0)").addClass("active").siblings().removeClass("active");
+                    break;
+                case 'sbgl':
+                    $('iframe').attr('src','./sbgl.html');
+                    $('.control_ul').children("li:eq(10)").addClass("active").siblings().removeClass("active");
+                    break;
+                case 'sxgl':
+                    $('iframe').attr('src','./sxgl.html');
+                    $('.control_ul').children("li:eq(6)").addClass("active").siblings().removeClass("active");
+                    break;
+                case 'tjqd':
+                    $('iframe').attr('src','./tjqd.html');
+                    $('.control_ul').children("li:eq(8)").addClass("active").siblings().removeClass("active");
+                    break;
+                case 'xxdr':
+                    $('iframe').attr('src','./xxdr.html');
+                    $('.control_ul').children("li:eq(10)").addClass("active").siblings().removeClass("active");
+                    break;
+                case 'yjpz':
+                    $('iframe').attr('src','./yjpz.html');
+                    $('.control_ul').children("li:eq(4)").addClass("active").siblings().removeClass("active");
+                    break;
+                default:
+                    $('iframe').attr('src','./llfx.html');
+                    $('.control_ul').children("li:eq(0)").addClass("active").siblings().removeClass("active");
+            }
+        })
+    }
+</script>
+</html>

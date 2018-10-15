@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <style>
+        .banner{
+            /* background: url(../image/banner.jpg) no-repeat 600% 60%; */
+            position: relative;
+            padding: 0;
+        }
+        .platform{
+            position: absolute;
+            top:40px;
+            left: 160px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .copyright{
+            position: absolute;
+            bottom: 30px;
+            left: 45%;
+            color: #fff;
+            font-size: 24px;
+        }
+        .login{
+            position: absolute;
+            top: 35%;
+            width: 400px;
+            height: auto;
+            text-align: center;
+        }
+        .line{
+            height: 5px;
+            width: 150px;
+            margin: 0 auto;
+        }
+        .name_inp{
+            margin-top: 50px;
+            color: #565656;
+        }
+        input{
+            width: 300px;
+            margin-left: 10px;
+            margin-bottom: 15px;
+            height: 40px;
+            border: 1px solid #ededed;
+            text-indent: 1em;
+        }
+        input::-webkit-input-placeholder{ /* 使用webkit内核的浏览器 */
+            text-indent: 1em;
+            color: #D8D8D8;
+        }
+        input:-moz-placeholder{/* Firefox版本4-18 */
+            text-indent: 1em;
+            color: #D8D8D8;
+        }                  
+        input::-moz-placeholder{/* Firefox版本19+ */
+            text-indent: 1em;
+            color: #D8D8D8;
+        }                  
+        input:-ms-input-placeholder{/* IE浏览器 */ 
+            text-indent: 1em;
+            color: #D8D8D8;
+        }      
+        .login_btn{
+            width: 300px;
+            line-height: 36px;
+            margin-left: 79px;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 10px;
+        }     
+    </style>
+</head>
+<body>
+    <div class="container-fluid banner" >
+        <img class="banner_img" src="../image/banner.jpg" alt="" style="display:block;margin:0 auto;">
+        <img class="login_png" src="../image/login.png" alt="" style="position: absolute;top:0;right: 0;">
+        <div class="platform">
+            <p class="chinese" style="font-size:40px;">外 部 数 据 采 集 平 台</p>
+            <p class="english" style="font-size:24px;">External data acquisition platform</p>
+        </div>
+        <div class="copyright">版权所有：浙江泰隆商业银行</div>
+        <div class="login">
+            <p style="font-size:40px;color:#FC7E63;margin:0 auto;text-align: center;letter-spacing: 5px;font-weight: bold;">欢迎登录</p>
+            <p class="line linear"></p>
+            <p class="name_inp">
+                用户名
+                <input type="text" placeholder="请输入用户名">
+            </p>
+            <p class="word_inp">
+                密&nbsp;&nbsp;&nbsp;&nbsp;码
+                <input type="text" placeholder="请输入密码">
+            </p>
+            <p class="login_btn linear-rt-lb">登录</p>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+    window.onload=function(){
+        // 获取浏览器的高度
+        var contentH = window.innerHeight;
+        $('.banner>img').css('height',contentH);    
+        // 获取浏览器的宽度
+        var contentW = window.innerWidth;
+        $('.banner_img').css('width',contentW);
+        var imgW = $('.banner_img').width();
+        var pngW = $('.login_png').width();
+        var width = (contentW - imgW)/2;
+        $('.login_png').css('right',width);
+        $('.login').css('right',pngW/6);
+        $('.login_btn').click(function(){
+            window.location.href = './index.html';
+        })
+    }
+</script>
+</html>

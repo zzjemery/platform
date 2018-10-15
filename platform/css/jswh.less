@@ -1,0 +1,35 @@
+.selectCondition_p{
+    line-height: 30px;
+    .form-control,input{
+        width: 300px;
+        margin-left: 20px;
+        border: 1px solid #ebebeb;
+        text-indent: 1em;
+        display: inline-block;
+    }
+    
+    input::-webkit-input-placeholder{
+        text-indent: 1em;
+        color: #CDCDCD;
+        letter-spacing: -0.34px;    
+    }
+    input::-moz-placeholder{  //不知道为何火狐的placeholder的颜色是粉红色，怎么改都不行，希望有大牛路过帮忙指点
+        text-indent: 1em;
+        color: #CDCDCD;
+        letter-spacing: -0.34px;            
+    }
+    input:-ms-input-placeholder{  //由于我的IE刚好是IE9，支持不了placeholder，所以也测试不了(⊙﹏⊙)，有IE10以上的娃可以帮我试试
+        text-indent: 1em;
+        color: #CDCDCD;
+        letter-spacing: -0.34px;            
+    }
+}
+.submit{
+    display: inline-block;
+    padding: 10px 50px;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 20px;
+    margin-left: 176px;
+    border-radius: 5px;
+}

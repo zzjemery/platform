@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>宁波国税授信信息导入</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/bdsjdl.css">
+    <style>
+        .layui-layer-btn a{
+            height: 36px !important;
+            line-height: 36px !important;
+            padding: 0 36px !important;
+            border: 1px solid #fc7e63 !important;
+            color: #fc7e63 !important;
+        }
+        .layui-layer-btn .layui-layer-btn0{
+            background: -webkit-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: -o-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: -moz-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            border-color: #FC7E63 !important;
+            color:#fff !important;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="title">批量数据管理 - 宁波国税授信数据管理 - <span>宁波国税授信信息导入</span></p>
+        <div class="select">
+            <div class="selectTime">
+                <span class="chose">导入授权信息</span>
+            </div>
+            <div class="selectCondition">
+                <div class="selectCondition-block  selectCondition-header">
+                    <div class="fl selectCondition-left">
+                        <div class="bdjs-search-card">
+                            <div class="fl bdjs-search-title">选择导入文件</div>
+                        </div>
+                        <div class="fl selectCondition-header-left-btn border-orange">选择文件</div>
+                        <div class="fl selectCondition-header-left-tips">未选择任何文件</div>
+                    </div>
+                </div>
+                <div class="selectCondition-block selectCondition-reason">
+                    <div class="selectCondition-reason-textarea fl">
+                        <div class="selectCondition-btn fl" style="margin:20px 0 0 120px;">
+                            <!-- <div class="button fl border-orange linear-rt-lb submit">提交<span class="btn_icon"></span></div> -->
+                            <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
+                                <button data-method="notice" class="layui-btn button fl border-orange linear-rt-lb submit">提交<i class="layui-icon btn_icon layui-icon-loading  layui-anim layui-anim-rotate layui-anim-loop" style="visibility:hidden;margin-left: 5px;"></i></button>
+                            </div>
+                            <div class="button fl border-orange">授信信息模板下载</div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="outer">
+                <p><i class="layui-icon fr layui-icon-close"></i> </p>
+            </div>     
+        </div>
+        
+    </div>
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use('layer', function(){ //独立版的layer无需执行这一句
+  var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+  
+  //触发事件
+  var active = {
+    notice: function(){
+      //示范一个公告层
+      layer.open({
+        type: 1
+        ,title: false //不显示标题栏
+        ,closeBtn: true
+        ,area: '300px;'
+        ,shade: 0.4
+        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+        ,btn: ['确定', '取消']
+        ,btn2: function(){
+          layer.closeAll();
+        }
+        ,btnAlign: 'c'
+        ,moveType: 1 //拖拽模式，0或者1 
+        // <p style="overflow:hidden;"><i class="layui-icon fr layui-icon-close" style="margin-right:15px;line-height:36px;font-size:30px;cursor:pointer;"></i> </p>
+        ,content: '<div class="outer" style="margin-top:20px;"><div style="text-align:center;"><span style="width:48px;height:48px;border-radius:50%;background-color:#8Dcf0a;margin:0 auto;display:block;text-align:center;"><i class="layui-icon layui-icon-ok" style="line-height:48px;color:#FFF;font-size:30px;"></i></span><p class="tips" style="margin:10px 0;font-weight:bold;">提交成功</p><p>恭喜您，您的信息已提交成功!</p></div></div>'
+        ,success: function(layero){
+            console.log('111');
+        }
+      });
+    }
+  };
+  
+    $('#layerDemo .layui-btn').on('click', function(){
+      setTimeout(() => {
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+            $('.btn_icon').css('visibility','hidden');
+      }, 2000);
+    
+    });
+});
+</script>
+<script>
+    window.onload=function(){
+        $('.submit').on('click',function(){
+            $('.btn_icon').css('visibility','visible');
+        })
+    }
+</script>
+</html>

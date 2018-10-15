@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>法院失败管理</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/bdsjdl.css">
+    <style>
+        .demo-input{
+            padding-left: 10px; 
+            height: 30px; 
+            min-width: 300px; 
+            line-height: 30px; 
+            border: 1px solid #e6e6e6;  
+            background-color: #fff;  
+            border-radius: 2px;
+        }
+        .left p，.right p{
+            width: 100%;
+            /* float: left; */
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        .form-control{
+            width: 25%;
+            display: inline-block;
+            margin-left: 10px;
+            border-radius: 0;
+            border-color: #e6e6e6;
+        }
+        table thead tr th {
+            line-height: 36px;
+            width: 10%;
+            text-align: center;
+        }
+        table tbody tr td {
+            line-height: 36px;
+            width: 10%;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="bdsj-title">批量数据管理 - 法院数据管理 - <span>法院失败管理</span></p>
+        <div class="select">
+            <div class="selectTime">
+                <span class="chose">填写查询条件</span>
+            </div>
+            <div class="selectCondition">
+                <div class="left fl" style="width:45%;">
+                    <p><i style="font-style: normal;color: red;">*</i>起始日期<input type="text" class="demo-input" placeholder="请选择" id="test1" style="margin:0 10px 0 13px; "><span class="glyphicon glyphicon-calendar"></span></p>
+                    <p><i style="font-style: normal;color: red;visibility: hidden">*浙江</i>模块
+                        <select class="form-control">
+                            <option>请选择</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </p>
+                    <p>
+                        <i style="font-style: normal;color: red;visibility: hidden">*</i>报告编号
+                        <input type="text" class="demo-input" placeholder="请输入" style="margin:0 10px 0 10px; ">
+                    </p>
+                    <p>
+                        <i style="font-style: normal;color: red;visibility: hidden">*</i>证件号码
+                        <input type="text" class="demo-input" placeholder="请输入" style="margin:0 10px 0 10px; ">
+                    </p>
+                </div>
+                <div class="right fl" style="width:45%;">
+                        <p><i style="font-style: normal;color: red;">*</i>终止日期<input type="text" class="demo-input" placeholder="请选择" id="test1_1" style="margin:0 10px 0 13px; "><span class="glyphicon glyphicon-calendar"></span></p>
+                        <p style="visibility:hidden;"><i style="font-style: normal;color: red;visibility: hidden">*浙江</i>模块
+                            <select class="form-control">
+                                <option>请选择</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </p>
+                        <p>
+                            <i style="font-style: normal;color: red;visibility: hidden">*</i>客户名称
+                            <input type="text" class="demo-input" placeholder="请输入" style="margin:0 10px 0 10px; ">
+                        </p>
+                        <p>
+                            <i style="font-style: normal;color: red;visibility: hidden">*</i>错误信息
+                            <input type="text" class="demo-input" placeholder="请输入" style="margin:0 10px 0 10px; ">
+                        </p>
+                </div>
+                <div class="selectCondition-btn fl" style="margin:20px 0 0 74px;width: 50%">
+                    <div class="button fl border-orange linear-rt-lb query" style="color:#fff;">查询</div>
+                    <div class="button fl border-orange">批量重置</div>
+                </div>
+                <div class="up linear"></div>
+            </div>       
+        </div>
+        <div class="result">
+            <p>机构列表</p>
+            <table cellpadding='5'  width="100%" style=" border:1px solid #ededed;border-collapse: collapse;text-align:center;overflow: hidden;">
+                <thead>
+                    <tr style="background-color:#f7f7f7; color:#565656;">
+                        <th>报告编号</th>
+                        <th>客户名称</th>
+                        <th>证件号码</th>
+                        <th>模块</th>
+                        <th>创建时间</th>
+                        <th>自动查询状态</th>
+                        <th>查询返回码</th>
+                        <th>查询返回信息</th>
+                        <th>设置重查</th>
+                        <th>开始重查</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr  style="width:100%;">
+                        <td colspan="10">无符合查询条件的记录</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+      
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../laydate/laydate.js"></script>
+<script src="../js/index.js"></script>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>系统管理</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/checksquer.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/xtgl.css">
+    <link rel="stylesheet" href="../css/bdsjdl.css">
+</head>
+<body>
+    <div class="content">
+        <p class="bdsj-title">批量数据管理 - 百度数据管理 - <span>百度数据导入</span></p>
+        <div class="select">
+            <div class="selectTime">
+                <span class="chose">导入工商数据</span>
+            </div>
+            <div class="selectCondition">
+                <div class="selectCondition-block  selectCondition-header">
+                    <div class="fl selectCondition-left">
+                        <div class="bdjs-search-card">
+                            <div class="fl bdjs-search-title">选择工商报表</div>
+                        </div>
+                       
+                        <div class="fl selectCondition-header-left-btn border-orange">选择文件</div>
+                        <div class="fl selectCondition-header-left-tips">未选择任何文件</div>
+                    </div>
+                    <div class="selectCondition-right fl">
+                        <div class="bdjs-search-card">
+                            <div class="fl bdjs-search-title"><span>*</span>查询渠道</div>
+                            <select class="form-control fl">
+                                    <option>请选择</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                            </select>
+                        </div>
+                 </div>   
+                </div>
+                <div class="selectCondition-block selectCondition-needAndPattern">
+                    <div class="fl selectCondition-left">
+                        <div class="bdjs-search-card fl">
+                            <div class="fl bdjs-search-title"><span>*</span>查询需求</div>
+                            <div class="">
+                                <div class="checkbox">
+                                    <label class="el-checkbox">
+                                        <input type="checkbox" name="checkbox_size" > 风险名单
+                                        <span class="el-checkbox-style  pull-left"></span>
+                                    </label>
+                                    <label class="el-checkbox">
+                                        <input type="checkbox" name="checkbox_size" > 多头详情
+                                        <span class="el-checkbox-style  pull-left"></span>
+                                    </label>
+                                    <label class="el-checkbox">
+                                        <input type="checkbox" name="checkbox_size" > 黑产信息
+                                        <span class="el-checkbox-style  pull-left"></span>
+                                    </label>
+                                    <label class="el-checkbox">
+                                        <input type="checkbox" name="checkbox_size" > 信用分
+                                        <span class="el-checkbox-style  pull-left"></span>
+                                    </label>
+                                    <label class="el-checkbox">
+                                        <input type="checkbox" name="checkbox_size" > 黑中介
+                                        <span class="el-checkbox-style  pull-left"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="selectCondition-right fl">
+                        <div class="bdjs-search-card fl">
+                            <div class="fl bdjs-search-title"><span>*</span>查询模式</div>
+                            <div class="checkbox">
+                                <label class="el-checkbox">
+                                    <input type="checkbox" name="checkbox_size" > 实时
+                                    <span class="el-checkbox-style  pull-left"></span>
+                                </label>
+                                <label class="el-checkbox">
+                                    <input type="checkbox" name="checkbox_size" > 实时+本地
+                                    <span class="el-checkbox-style  pull-left"></span>
+                                </label>
+                                <label class="el-checkbox">
+                                    <input type="checkbox" name="checkbox_size" > 本地
+                                    <span class="el-checkbox-style  pull-left"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                <div class="selectCondition-block selectCondition-reason">
+                    <div class="bdjs-search-card fl">
+                        <div class="fl bdjs-search-title"><span>*</span>查询模式</div>
+                    </div>
+                    <div class="selectCondition-reason-textarea fl">
+                        <div class="textarea">
+                            <textarea class="form-control fl" rows="3" placeholder="输入查询原因"></textarea>
+                            <div class="textarea-acount">
+                                <span class="textarea-acount-totle">0</span>
+                                <span>/200</span>
+                            </div>
+                        </div>
+                        <div class="selectCondition-btn fl">
+                            <div class="button fl border-orange linear-rt-lb submit">提交</div>
+                            <div class="button fl border-orange">返回</div>
+                            <div class="button fl border-orange">Excel模板下载</div>
+                        </div>
+                        <div class="tips fl">请先下载批量EXCEL模版</div>
+                    </div>
+                </div>
+                <div class="up linear"></div>
+            </div>       
+        </div>
+    </div>
+      
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+</html>

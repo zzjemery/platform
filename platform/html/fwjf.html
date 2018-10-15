@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>服务计费</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/jswh.css">
+    <style>
+        .layui-laypage .layui-laypage-curr .layui-laypage-em{
+            background: -webkit-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: -o-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: -moz-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+        }
+        .layui-laypage-btn{
+            color:#fd8a72;
+        }
+        table thead tr th {
+            line-height: 36px;
+            width: 10%;
+            text-align: center;
+        }
+        table tbody tr td {
+            line-height: 40px;
+            width: 10%;
+            text-align: center;
+            color: #565656;
+        }
+        table tbody tr:nth-child(2n){
+            background-color: #fcfdfe;
+        }
+        .layui-form-checked[lay-skin=primary] i{
+            border-color: #FC7E63;
+            background: -webkit-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: -o-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: -moz-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+        }
+        td:last-child{
+            cursor: pointer;
+            color:#f39d68;
+        }
+        td:first-child{
+            text-align: left;
+            padding-left: 5%;
+        }
+        select{
+            width: 50%;
+           height: 36px;
+           border: 1px solid #ebebeb;
+           border-radius: 3px;
+        }
+        td input{
+            height: 36px;
+            border: 1px solid #ebebeb;
+           border-radius: 3px;
+           text-indent: 1em;
+        }
+        .edit{
+            cursor: pointer;
+            color:#f39d68;
+        }
+        .layui-layer-page .layui-layer-content{
+            overflow: hidden !important;
+        }
+        .span_icon{
+            height: 14px;
+            width: 14px;
+            text-align: center;
+            margin-left: 20px;
+            border-color: #FC7E63;
+            background-color: #FC7E63;
+        }
+        .layui-layer-setwin .layui-layer-close2{
+            right: -14px !important;
+            top: -14px !important;
+        }
+        .close_inner{
+            display: inline-block;
+            padding: 10px 50px;
+            cursor: pointer;
+            color: #FC7E63;
+            margin-top: 20px;
+            margin-left: 16px;
+            border-radius: 5px;
+            border: 1px solid #FC7E63;
+        }
+        .layui-layer-btn a{
+            height: 36px !important;
+            line-height: 36px !important;
+            padding: 0 36px !important;
+            border: 1px solid #fc7e63 !important;
+            color: #fc7e63 !important;
+            
+        }
+        .layui-layer-btn-c{
+            position: absolute;
+            left: 213px;
+        }
+        .layui-layer-btn .layui-layer-btn0{
+            background: -webkit-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: -o-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: -moz-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            background: linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);
+            border-color: #FC7E63 !important;
+            color:#fff !important;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="title">计费管理 - <span>服务计费</span></p>
+        <div class="select">
+            <div class="selectTime">
+                <span class="chose">填写查询条件</span>
+            </div>
+            <div class="selectCondition">
+                <div class="selectMain">
+                    <p class="selectCondition_p">渠道名称<input type="text" placeholder="请输入"></p>
+                    <div class="site-demo-button" id="layerDemo" style="margin-bottom: 0;">
+                        <button data-method="notice" class="layui-btn button fl border-orange linear-rt-lb submit" style="padding:0 50px;width:128px;margin-bottom:30px;">查询<i class="layui-icon btn_icon layui-icon-loading  layui-anim layui-anim-rotate layui-anim-loop" style="visibility:hidden;margin-left: 5px;"></i></button>
+                    </div>
+                </div>
+                
+            </div>       
+        </div>
+        <div class="result" style="margin-top:175px;">
+            <p style="float:left;width:50%;">查询结果</p>
+            <table cellpadding='5'  width="100%" style="margin-top: 30px; border:1px solid #ededed;border-collapse: collapse;text-align:center;overflow: hidden;">
+                <thead>
+                    <tr style="background-color:#f7f7f7; color:#565656;">
+                        <th>渠道名称</th>
+                        <th>是否控制总费用</th>
+                        <th>已使用费用（元）</th>
+                        <th>费用上限（元）</th>
+                        <th>操作</th>
+                        <th>详情</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>信贷系统</td>
+                        <td>
+                            <select name="selectall" >
+                                <option value="否">否</option>
+                                <option value="是">是</option>
+                            </select>
+                            
+                        </td>
+                        <td><input type="text" value="12163.09"></td>
+                        <td><input type="text"></td>
+                        <td><span class="edit">编辑</span></td>
+                        <td><span class="more">详情</span></td>
+                    </tr>
+                    <tr>
+                        <td>集中作业平台</td>
+                        <td>是</td>
+                        <td>17825</td>
+                        <td></td>
+                        <td><span class="edit">提交<i style="margin:0 5px;font-style:normal;color: #ededed;">|</i>取消</span></td>
+                        <td><span class="more">详情</span></td>
+                    </tr>
+                    <tr>
+                        <td>手机银行</td>
+                        <td>否</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="edit">编辑</span></td>
+                        <td><span class="more">详情</span></td>
+                    </tr>
+                    <tr>
+                        <td>金融移动服务站</td>
+                        <td>否</td>
+                        <td>14.6</td>
+                        <td></td>
+                        <td><span class="edit">编辑</span></td>
+                        <td><span class="more">详情</span></td>
+                    </tr>
+                    <tr>
+                        <td>测试渠道</td>
+                        <td>否</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="edit">编辑</span></td>
+                        <td><span class="more">详情</span></td>
+                    </tr>
+                    <tr>
+                        <td>惠众征信系统</td>
+                        <td>否</td>
+                        <td>14.6</td>
+                        <td></td>
+                        <td><span class="edit">编辑</span></td>
+                        <td><span class="more">详情</span></td>
+                    </tr>
+                    <tr>
+                        <td>金融互联网服务</td>
+                        <td>否</td>
+                        <td>4.7</td>
+                        <td></td>
+                        <td><span class="edit">编辑</span></td>
+                        <td><span class="more">详情</span></td>
+                    </tr>
+                    <tr>
+                        <td>柜面系统</td>
+                        <td>否</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="edit">编辑</span></td>
+                        <td><span class="more">详情</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>零售评价系统</td>
+                        <td>否</td>
+                        <td>5.1</td>
+                        <td></td>
+                        <td><span class="edit">编辑</span></td>
+                        <td><span class="more">详情</span></td>
+                    </tr>
+                    <tr>
+                        <td>外部数据平台</td>
+                        <td>否</td>
+                        <td></td>
+                        <td></td>
+                        <td><span class="edit">编辑</span></td>
+                        <td><span class="more">详情</span></td>
+                    </tr>              
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+    layui.use(['laypage', 'layer'], function(){
+    var laypage = layui.laypage
+    ,layer = layui.layer;
+    
+    //完整功能
+    laypage.render({
+        elem: 'demo7'
+        ,count: 79
+        ,layout: ['count', 'prev', 'page', 'next',  'skip']
+        ,jump: function(obj){
+        console.log(obj)
+        }
+    });
+    
+    });
+    $('.layui-unselect').on('click',function(){
+        $(this).toggleClass('layui-form-checked');
+    })
+</script>
+<script>
+layui.use('layer', function(){ //独立版的layer无需执行这一句
+  var $ = layui.jquery, layer = layui.layer; //独立版的layer无需执行这一句
+  
+  //触发事件
+  var active = {
+    notice: function(){
+      //示范一个公告层
+      layer.open({
+        type: 1
+        ,title: false //不显示标题栏
+        ,closeBtn: true
+        ,area: ['700px','700px']
+        ,shade: 0.4
+        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+        ,btn: ['提交', '关闭']
+        ,btn2: function(){
+          layer.closeAll();
+        }
+        ,btnAlign: 'c'
+        ,moveType: 1 //拖拽模式，0或者1 
+        // <p style="overflow:hidden;"><i class="layui-icon fr layui-icon-close" style="margin-right:15px;line-height:36px;font-size:30px;cursor:pointer;"></i> </p>
+        ,content: '<div class="content" style="height:490px;"><p style="line-height:36px;background-color:#f7f7f7;font-weight:bold;font-size:16px;padding-left:10px;">当月重复查询免费配置</p><p class="title">计费管理 - <span>服务计费</span></p><div class="select"><div class="selectTime"><span class="chose">填写参数配置</span></div><div class="selectCondition" style="padding-bottom:50px;"><div class="selectMain"><p class="selectCondition_p"><i style="font-style:normal;color:red;">*</i> 接口类型<input type="text" placeholder="服务接口"></p><p class="selectCondition_p"><i style="font-style:normal;color:red;">*</i> 接口名称<input type="text" placeholder="百度页面"></p><p class="selectCondition_p"><i style="font-style:normal;color:red;">*</i> 免费时间<input type="text" placeholder="请输入" style="width:150px;">  天</p><p class="selectCondition_p"><i style="font-style:normal;color:red;">*</i> 关联厂商<input type="text" placeholder="百度"></p><p class="selectCondition_p"><i style="font-style:normal;color:red;">*</i> 免费类型<select class="form-control" style="text-indent:0;"><option>一定日期内免费</option><option>2</option><option>3</option></select></p><p class="selectCondition_p"><i style="font-style:normal;color:red;">*</i> 参数列表<span class="span_icon"><i class="layui-icon layui-icon-ok" style="line-height:14px;color:#FFF;"></i></span> 证件号码</p></div></div></div>'
+        ,success: function(layero){
+            console.log('111');
+        }
+      });
+    }
+  };
+  
+    $('#layerDemo .layui-btn').on('click', function(){
+      setTimeout(() => {
+            var othis = $(this), method = othis.data('method');
+            active[method] ? active[method].call(this, othis) : '';
+            $('.btn_icon').css('visibility','hidden');
+      }, 2000);
+    
+    });
+});
+</script>
+<script>
+    window.onload=function(){
+        $('.submit').on('click',function(){
+            $('.btn_icon').css('visibility','visible');
+        })
+    }
+</script>
+</html>

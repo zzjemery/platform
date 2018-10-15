@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+ul{
+    list-style: none;
+    li{
+        float: left;
+    }
+}
+// 渐变色
+.linear{
+    background: -webkit-linear-gradient(-205deg, #FEB59C 0%, #FC7E63 95%);        
+    background: -o-linear-gradient(-205deg, #FEB59C 0%, #FC7E63 95%);         
+    background: -moz-linear-gradient(-205deg, #FEB59C 0%, #FC7E63 95%);         
+    background: linear-gradient(-205deg, #FEB59C 0%, #FC7E63 95%);	
+}
+.linear-rb-lt{
+    background: -webkit-linear-gradient(-205deg, #FC7E63 0%, #FEB59C  95%);        
+    background: -o-linear-gradient(-205deg, #FC7E63 0%, #FEB59C  95%);         
+    background: -moz-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);         
+    background: linear-gradient(-205deg, #FC7E63 0%, #FEB59C  95%);	
+}
+.linear-lt-rb{
+    background: -webkit-linear-gradient(205deg, #FC7E63 0%, #FEB59C  95%);        
+    background: -o-linear-gradient(205deg, #FC7E63 0%, #FEB59C  95%);         
+    background: -moz-linear-gradient(205deg, #FC7E63 0%, #FEB59C 95%);         
+    background: linear-gradient(205deg, #FC7E63 0%, #FEB59C  95%);	
+}
+.linear-rt-lb{
+    background: -webkit-linear-gradient(205deg, #FEB59C 0%, #FC7E63 95%);        
+    background: -o-linear-gradient(205deg, #FEB59C 0%, #FC7E63 95%);         
+    background: -moz-linear-gradient(205deg, #FEB59C 0%, #FC7E63 95%);         
+    background: linear-gradient(205deg, #FEB59C 0%, #FC7E63 95%);	
+}
+// radio样式
+.margin-r{
+	margin-right:10px;
+	vertical-align: top;
+	line-height:1.6;
+}
+.container{
+	width:900px;
+	padding-bottom:100px;
+}
+.btn-primary{
+	border-color: #20a0ff !important;
+	background-color: #20a0ff !important;
+	margin-right:20px;
+}
+// 下面的css可以去掉date中上下小三角，但是保留input类型为number的小三角。 
+input[type=date]::-webkit-inner-spin-button { visibility: hidden; } 
+.content{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    .title{
+        font-size: 16px;
+        color: #FC7E63;
+        line-height: 60px;
+        border-bottom: 2px solid #f5f5f5;
+        padding-left: 30px;
+        font-weight: bold;
+    }
+    .select{
+        margin: 10px 50px;
+        background-color: #fff;
+        position: relative;
+    }
+    .selectTime::before{
+        content: '';
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: #eee;/*颜色需与主题大背景色一致*/ 
+        position: relative;
+        top: 12px;/*调节线高*/
+        left: 0;
+    }
+    .chose{
+        display: inline-block;
+        background: #fff;
+        padding: 0 18px 0 18px;
+        position: relative;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 30px;
+    }
+    .selectCondition{
+        width: 100%;
+        border: 1px solid #eee;
+        position: absolute;
+        top:12px;
+        left: 0px;
+        border-top: none;
+        .selectMain{
+            padding: 0 100px;
+            .time{
+                margin: 30px 0;
+                i{
+                    font-style: normal;
+                    color: #D0021B;
+                }
+                .el-radio{
+                    margin-left:10px; 
+                    span{
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .query{
+                .linear;
+                margin-top: 30px;
+                margin-left: 78px;
+                display: block;
+                width: 143.73px;
+                line-height: 40px;
+                text-align: center;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+    .result{
+        margin: 280px 50px 0;
+        overflow: hidden;
+        li{
+            line-height: 36px;
+            width: 100%;
+            span{
+                text-align: center;
+                display: inline-block;
+                width: 19%;
+            }
+        }
+    }
+}

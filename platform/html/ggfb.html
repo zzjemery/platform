@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>系统管理</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/checksquer.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/xtgl.css">
+    <link rel="stylesheet" href="../css/bdsjdl.css">
+    <style>
+        .selectCondition_content p{
+            line-height: 40px;
+        }
+        .selectCondition_content p span{
+            color: red;
+            margin-right: 5px;
+        }
+        .selectCondition_content p input{
+            line-height: 36px;
+            text-indent: 1em;
+            border:1px solid #ededed;
+            margin-left: 15px;
+            width: 300px;
+        }
+        select{
+            height: 36px;
+            line-height: 36px;
+            text-indent: 1em;
+            border:1px solid #ededed;
+            margin-left: 15px;
+            width: 150px;
+        }
+        input::placeholder{
+            color: #cdcdcd;
+        }
+        .set{
+            display: inline-block;
+            text-align: center;
+            line-height: 26px;
+            border-radius: 3px;
+            color: #fff !important;
+            padding: 5px 10px;
+            margin: 0 10px;
+            cursor: pointer;
+            background: -webkit-linear-gradient(-205deg, #FC7E63 0%, #FEB59C  95%);        
+            background: -o-linear-gradient(-205deg, #FC7E63 0%, #FEB59C  95%);         
+            background: -moz-linear-gradient(-205deg, #FC7E63 0%, #FEB59C 95%);         
+            background: linear-gradient(-205deg, #FC7E63 0%, #FEB59C  95%);	
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="bdsj-title">银行公告 - <span>公告发布</span></p>
+        <div class="select">
+            <div class="selectTime">
+                <span class="chose">填写公告内容</span>
+            </div>
+            <div class="selectCondition">
+                <div class="selectCondition_content">
+                    <p><span>*</span>公告标题<input type="text" placeholder="请输入"></p>
+                    <p>
+                        <span>*</span>发布时间
+                        <select name="selectTime">
+                            <option value="0">请选择</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                    </p>
+                    <p>截止有效期<input type="text" placeholder="请输入"><span class="set">设置为永久有效</span><span style="color:#969696;">输入为空则表示永久有效</span></p>
+                </div>
+                <div class="selectCondition-block selectCondition-reason">
+                    <div class="bdjs-search-card fl">
+                        <div class="fl bdjs-search-title" style="width:70px;padding:0;">公告内容</div>
+                    </div>
+                    <div class="selectCondition-reason-textarea fl" style="margin-left:15px;">
+                        <div class="textarea">
+                            <textarea class="form-control fl" rows="3" placeholder="请输入公告内容"></textarea>
+                            <!-- <div class="textarea-acount">
+                                <span class="textarea-acount-totle">0</span>
+                                <span>/200</span>
+                            </div> -->
+                        </div>
+                        <div class="selectCondition-btn fl">
+                            <div class="button fl border-orange linear-rt-lb submit">提交</div>
+                            <div class="button fl border-orange reset">重置</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="up linear"></div>
+            </div>       
+        </div>
+    </div>
+      
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+</html>

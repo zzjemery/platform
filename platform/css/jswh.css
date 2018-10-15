@@ -1,0 +1,35 @@
+.selectCondition_p {
+  line-height: 30px;
+}
+.selectCondition_p .form-control,
+.selectCondition_p input {
+  width: 300px;
+  margin-left: 20px;
+  border: 1px solid #ebebeb;
+  text-indent: 1em;
+  display: inline-block;
+}
+.selectCondition_p input::-webkit-input-placeholder {
+  text-indent: 1em;
+  color: #CDCDCD;
+  letter-spacing: -0.34px;
+}
+.selectCondition_p input::-moz-placeholder {
+  text-indent: 1em;
+  color: #CDCDCD;
+  letter-spacing: -0.34px;
+}
+.selectCondition_p input:-ms-input-placeholder {
+  text-indent: 1em;
+  color: #CDCDCD;
+  letter-spacing: -0.34px;
+}
+.submit {
+  display: inline-block;
+  padding: 10px 50px;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 20px;
+  margin-left: 176px;
+  border-radius: 5px;
+}

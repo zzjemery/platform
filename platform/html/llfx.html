@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>流量分析</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/checkbox.css">
+    <link rel="stylesheet" href="../css/public.css">
+    <link rel="stylesheet" href="../css/xtgl.css">
+    <style>
+        .demo-input{
+            padding-left: 10px; 
+            height: 36px; 
+            min-width: 262px; 
+            line-height: 36px; 
+            border: 1px solid #e6e6e6;  
+            background-color: #fff;  
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <p class="title">流量分析</p>
+        <div class="select">
+            <div class="selectTime">
+                <span class="chose">选择分析时间</span>
+            </div>
+            <div class="selectCondition">
+                <div class="selectMain">
+                    <p class="time">
+                        <span><i>*</i> 时间跨度</span>
+                        <label class="el-radio">
+                            <input type="radio" name="radio_size" checked>日
+                            <span class="el-radio-style  pull-left"></span>
+                        </label>
+                        <label class="el-radio">
+                            <input type="radio" name="radio_size" >周
+                            <span class="el-radio-style  pull-left"></span>
+                        </label>
+                        <label class="el-radio">
+                            <input type="radio" name="radio_size" >月
+                            <span class="el-radio-style  pull-left"></span>
+                        </label>
+                        <label class="el-radio">
+                            <input type="radio" name="radio_size" >年
+                            <span class="el-radio-style  pull-left"></span>
+                        </label>
+                    </p>
+                    <div style="overflow:hidden;line-height:30px;">
+                        <span class="fl" style="line-height:36px;margin-right: 5px;"><i style="font-style: normal;color: #D0021B;">*</i> 时间跨度</span>
+                        <div class="fl" id="from" style="margin:0 10px ;">
+                            <input type="text" class="demo-input" placeholder="请选择" id="test1_1" style="margin:0 10px 0 10px; ">
+                        </div>
+                        <span class="fl" style="margin:0 10px;line-height:36px;">至</span> 
+                        <div class="fl" id="to" style="margin:0 10px ;">
+                            <input type="text" class="demo-input" placeholder="请选择" id="test1" style="margin:0 10px 0 10px; ">
+                        </div>
+                        <span class="fl glyphicon glyphicon-calendar" style="line-height:36px;"></span>
+                    </div>
+                    <span class="query">查&nbsp;&nbsp;&nbsp;&nbsp;询</span>
+                </div>
+            </div>
+        </div>
+        <div class="result">
+            <p>分析结果</p>
+            <ul class="result_ul">
+                <li style="background-color:#F7F7F7;border:1px solid #EDEDED;">
+                    <span>合计</span>
+                    <span>实际调用</span>
+                    <span>本地调用</span>
+                    <span>命中率</span>
+                    <span>失败次数</span>
+                </li>
+                <li style="border:1px solid #EDEDED;border-top: none;">
+                    <span style="color: #FC7E63;">181</span>
+                    <span>46</span>
+                    <span>0</span>
+                    <span>23.91</span>
+                    <span>50</span>
+                </li>
+            </ul>
+        </div> 
+    </div>
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../laydate/laydate.js"></script>
+<script src="../js/index.js"></script>
+
+</html>
